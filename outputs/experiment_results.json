@@ -1,0 +1,115 @@
+{
+  "dataset": {
+    "train_samples": 200,
+    "test_samples": 50,
+    "classes": [
+      "shanghai",
+      "changsha",
+      "zhengzhou",
+      "tianjin",
+      "nanchang"
+    ],
+    "split": "stratified random split, seed=42",
+    "limitation": "Speaker-disjoint evaluation is unavailable because most downloaded metadata lacks speaker identifiers."
+  },
+  "models": {
+    "cnn": {
+      "accuracy": 0.68,
+      "macro_f1": 0.6794211017740429,
+      "classification_report": {
+        "shanghai": {
+          "precision": 0.8,
+          "recall": 0.8,
+          "f1-score": 0.8,
+          "support": 10.0
+        },
+        "changsha": {
+          "precision": 1.0,
+          "recall": 0.7,
+          "f1-score": 0.8235294117647058,
+          "support": 10.0
+        },
+        "zhengzhou": {
+          "precision": 0.42857142857142855,
+          "recall": 0.3,
+          "f1-score": 0.35294117647058826,
+          "support": 10.0
+        },
+        "tianjin": {
+          "precision": 0.875,
+          "recall": 0.7,
+          "f1-score": 0.7777777777777778,
+          "support": 10.0
+        },
+        "nanchang": {
+          "precision": 0.5,
+          "recall": 0.9,
+          "f1-score": 0.6428571428571429,
+          "support": 10.0
+        },
+        "accuracy": 0.68,
+        "macro avg": {
+          "precision": 0.7207142857142858,
+          "recall": 0.6799999999999999,
+          "f1-score": 0.6794211017740429,
+          "support": 50.0
+        },
+        "weighted avg": {
+          "precision": 0.7207142857142856,
+          "recall": 0.68,
+          "f1-score": 0.679421101774043,
+          "support": 50.0
+        }
+      }
+    },
+    "whisper": {
+      "accuracy": 0.98,
+      "macro_f1": 0.9799498746867167,
+      "classification_report": {
+        "shanghai": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 10.0
+        },
+        "changsha": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 10.0
+        },
+        "zhengzhou": {
+          "precision": 0.9090909090909091,
+          "recall": 1.0,
+          "f1-score": 0.9523809523809523,
+          "support": 10.0
+        },
+        "tianjin": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 10.0
+        },
+        "nanchang": {
+          "precision": 1.0,
+          "recall": 0.9,
+          "f1-score": 0.9473684210526315,
+          "support": 10.0
+        },
+        "accuracy": 0.98,
+        "macro avg": {
+          "precision": 0.9818181818181818,
+          "recall": 0.9800000000000001,
+          "f1-score": 0.9799498746867169,
+          "support": 50.0
+        },
+        "weighted avg": {
+          "precision": 0.9818181818181819,
+          "recall": 0.98,
+          "f1-score": 0.9799498746867168,
+          "support": 50.0
+        }
+      }
+    }
+  }
+}
