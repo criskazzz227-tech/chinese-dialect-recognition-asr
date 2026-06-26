@@ -1,0 +1,33 @@
+services:
+  api:
+    build: .
+    command: uvicorn app:app --host 0.0.0.0 --port 8000
+    ports:
+      - "8000:8000"
+    volumes:
+      - whisper-cache:/root/.cache/whisper
+    environment:
+      DIALECT_DEFAULT_CLASSIFIER: whisper
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 20s
+      timeout: 5s
+      retries: 3
+
+  web:
+    build: .
+    command: streamlit run streamlit_app.py --server.address 0.0.0.0 --server.port 8501
+    ports:
+      - "8501:8501"
+    volumes:
+      - app-data:/app/data
+      - whisper-cache:/root/.cache/whisper
+    environment:
+      DIALECT_DEFAULT_CLASSIFIER: whisper
+    depends_on:
+      api:
+        condition: service_healthy
+
+volumes:
+  app-data:
+  whisper-cache:
