@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.git/
+.idea/
+.venv/
+logs/
+data/external/
+data/*.db*
+outputs/*_features.joblib
+outputs/*.csv
