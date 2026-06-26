@@ -1,0 +1,49 @@
+{
+  "accuracy": 0.98,
+  "macro_f1": 0.9799498746867167,
+  "classification_report": {
+    "shanghai": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 10.0
+    },
+    "changsha": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 10.0
+    },
+    "zhengzhou": {
+      "precision": 0.9090909090909091,
+      "recall": 1.0,
+      "f1-score": 0.9523809523809523,
+      "support": 10.0
+    },
+    "tianjin": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 10.0
+    },
+    "nanchang": {
+      "precision": 1.0,
+      "recall": 0.9,
+      "f1-score": 0.9473684210526315,
+      "support": 10.0
+    },
+    "accuracy": 0.98,
+    "macro avg": {
+      "precision": 0.9818181818181818,
+      "recall": 0.9800000000000001,
+      "f1-score": 0.9799498746867169,
+      "support": 50.0
+    },
+    "weighted avg": {
+      "precision": 0.9818181818181819,
+      "recall": 0.98,
+      "f1-score": 0.9799498746867168,
+      "support": 50.0
+    }
+  }
+}
